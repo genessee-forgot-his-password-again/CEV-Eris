@@ -395,3 +395,232 @@ var/global/excelsior_last_draft = 0
 	if(excelsior_energy < reinforcements_cost)
 		return FALSE
 	return TRUE
+	
+// admin teleporters
+// parent
+
+/obj/machinery/complant_teleporter/admin
+	name = "ultra super advanced synthesizer"
+	desc = "A powerful synthesizer that can print numerous materials for, essentially, free."
+	idle_power_usage = 1
+	active_power_usage = 1
+
+	max_energy = 100000
+	energy_gain = 1000
+
+	reinforcements_delay = 2 MINUTES
+	reinforcements_cost = 1
+	
+	entropy_value = 0
+	
+// parts + tools
+
+/obj/machinery/complant_teleporter/admin/construction
+	name = "Bluespace League material fabricator"
+	desc = "A BSL-branded fabricator that can produce a variety of materials and parts using small amounts of electricity."
+
+	materials_list = list(
+		MATERIAL_STEEL = list("amount" = 500, "price" = 1),
+		MATERIAL_WOOD = list("amount" = 500, "price" = 1),
+		MATERIAL_PLASTIC = list("amount" = 500, "price" = 1),
+		MATERIAL_GLASS = list("amount" = 500, "price" = 1),
+		MATERIAL_SILVER = list("amount" = 500, "price" = 1),
+		MATERIAL_PLASMA = list("amount" = 500, "price" = 1),
+		MATERIAL_PLASTEEL = list("amount" = 500, "price" = 1),
+		MATERIAL_CARDBOARD = list("amount" = 500, "price" = 1),
+		MATERIAL_BIOMATTER = list("amount" = 500, "price" = 1),
+		MATERIAL_PLATINUM = list("amount" = 500, "price" = 1),
+		MATERIAL_GOLD = list("amount" = 500, "price" = 1),
+		MATERIAL_URANIUM = list("amount" = 500, "price" = 1),
+		MATERIAL_DIAMOND = list("amount" = 500, "price" = 1)
+		)
+
+	parts_list = list(
+		/obj/item/spacecash/bundle/c1000 = 1,
+		/obj/item/spacecash/bundle/c10000 = 1,
+		/obj/item/spacecash/bundle/c100000 = 1,
+		/obj/item/stock_parts/console_screen = 1,
+		/obj/item/stock_parts/capacitor/debug = 1,
+		/obj/item/stock_parts/scanning_module/debug = 1,
+		/obj/item/stock_parts/manipulator/debug = 1,
+		/obj/item/stock_parts/micro_laser/debug = 1,
+		/obj/item/stock_parts/matter_bin/debug = 1,
+		/obj/item/cell/large/moebius/nuclear/infinite = 1,
+		/obj/item/cell/medium/moebius/nuclear/infinite = 1,
+		/obj/item/cell/small/moebius/nuclear/infinite = 1,
+		/obj/item/storage/deferred/crate/cells = 1,
+		/obj/item/computer_hardware/hard_drive/portable/design/excelsior/weapons = 1,
+		/obj/item/storage/deferred/disks = 1,
+		/obj/item/storage/toolbox/syndicate = 1,
+		/obj/item/storage/toolbox/mechanical = 1,
+		/obj/item/storage/toolbox/electrical = 1,
+		/obj/item/storage/deferred/crate/tools = 1,
+		/obj/item/storage/deferred/toolmod = 1
+		)
+
+// weapons + armor
+
+/obj/machinery/complant_teleporter/admin/armory
+	name = "Bluespace League military fabricator"
+	desc = "A BSL-branded fabricator that prints a large assortment of weapons and armor for use in military applications."
+
+	materials_list = list()
+
+	parts_list = list(
+		/obj/item/gun/projectile/colt = 1,
+		/obj/item/gun/projectile/mk58 = 1,
+		/obj/item/gun/projectile/paco = 1,
+		/obj/item/gun/projectile/lamia = 1,
+		/obj/item/gun/projectile/olivaw = 1,
+		/obj/item/gun/projectile/type_42 = 1,
+		/obj/item/gun/projectile/type_69 = 1,
+		/obj/item/gun/projectile/giskard = 1,
+		/obj/item/gun/projectile/selfload = 1,
+		/obj/item/ammo_magazine/pistol = 1,
+		/obj/item/ammo_magazine/pistol/highvelocity = 1,
+		/obj/item/ammo_magazine/hpistol = 1,
+		/obj/item/ammo_magazine/hpistol/highvelocity = 1,
+		/obj/item/ammo_magazine/magnum = 1,
+		/obj/item/ammo_magazine/magnum/hv = 1,
+		/obj/item/ammo_magazine/cspistol = 1,
+		/obj/item/ammo_magazine/cspistol/hv = 1,
+		/obj/item/ammo_magazine/ammobox/pistol = 1,
+		/obj/item/ammo_magazine/ammobox/pistol/hv = 1,
+		/obj/item/ammo_magazine/ammobox/magnum = 1,
+		/obj/item/ammo_magazine/ammobox/magnum/hv = 1,
+		/obj/item/ammo_magazine/ammobox/magnum/hv = 1,
+		/obj/item/ammo_magazine/ammobox/clrifle_small = 1,
+		/obj/item/ammo_magazine/ammobox/clrifle_small/hv = 1,
+		/obj/item/gun/projectile/shotgun/bull = 1,
+		/obj/item/gun/projectile/shotgun/pump = 1,
+		/obj/item/gun/projectile/shotgun/bojevic = 1,
+		/obj/item/gun/projectile/shotgun/doublebarrel = 1,
+		/obj/item/gun/projectile/shotgun/doublebarrel/sawn = 1,
+		/obj/item/gun/projectile/shotgun/pump/gladstone = 1,
+		/obj/item/gun/projectile/shotgun/pump/regulator = 1,
+		/obj/item/ammo_magazine/m12 = 1,
+		/obj/item/ammo_magazine/m12/pellet = 1,
+		/obj/item/ammo_magazine/ammobox/shotgun = 1,
+		/obj/item/ammo_magazine/ammobox/shotgun/buckshot = 1,
+		/obj/item/ammo_magazine/ammobox/shotgun/incendiaryshells = 1,
+		/obj/item/gun/projectile/automatic/wintermute = 1,
+		/obj/item/gun/projectile/automatic/z8 = 1,
+		/obj/item/gun/projectile/automatic/sol = 1,
+		/obj/item/gun/projectile/automatic/ak47/fs = 1,
+		/obj/item/ammo_magazine/srifle = 1,
+		/obj/item/ammo_magazine/srifle/hv = 1,
+		/obj/item/ammo_magazine/ihclrifle = 1,
+		/obj/item/ammo_magazine/ihclrifle/hv = 1,
+		/obj/item/ammo_magazine/lrifle = 1,
+		/obj/item/ammo_magazine/lrifle/highvelocity = 1,
+		/obj/item/ammo_magazine/ammobox/srifle = 1,
+		/obj/item/ammo_magazine/ammobox/srifle_small/hv = 1,
+		/obj/item/ammo_magazine/ammobox/clrifle = 1,
+		/obj/item/ammo_magazine/ammobox/clrifle_small/hv = 1,
+		/obj/item/ammo_magazine/ammobox/lrifle = 1,
+		/obj/item/ammo_magazine/ammobox/lrifle_small/hv = 1,
+		/obj/item/gun/energy/gun/martin = 1,
+		/obj/item/gun/energy/gun = 1,
+		/obj/item/gun/energy/laser = 1,
+		/obj/item/gun/energy/retro = 1,
+		/obj/item/gun/energy/retro/sawn = 1,
+		/obj/item/gun/energy/captain = 1,
+		/obj/item/cell/small/hyper = 1,
+		/obj/item/cell/medium/hyper = 1,
+		/obj/item/grenade/explosive = 1,
+		/obj/item/grenade/frag = 1,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/tool/knife/boot = 1,
+		/obj/item/melee/energy/sword = 1,
+		/obj/item/tool/sword/nt/shortsword = 1,
+		/obj/item/tool/sword/nt/longsword = 1,
+		/obj/item/tool/knife/dagger/nt = 1,
+		/obj/item/tool/sword/nt/halberd = 1,
+		/obj/item/tool/sword/nt/spear = 1,
+		/obj/item/shield/riot/nt = 1,
+		/obj/item/shield/buckler/nt = 1,
+		/obj/item/storage/deferred/crate/saw = 1,
+		/obj/item/storage/deferred/crate/ak = 1,
+		/obj/item/storage/deferred/crate/kovacs = 1,
+		/obj/item/storage/deferred/crate/grenadier = 1,
+		/obj/item/storage/deferred/crate/antiarmor = 1,
+		/obj/item/storage/deferred/crate/demolition = 1,
+		/obj/item/storage/deferred/crate/marksman = 1,
+		/obj/item/storage/deferred/crate/sidearm = 1,
+		/obj/item/storage/deferred/crate/specialists_sidearm = 1,
+		/obj/item/clothing/suit/armor/vest/full = 1,
+		/obj/item/clothing/suit/armor/flak/full = 1,
+		/obj/item/clothing/suit/armor/bulletproof/full = 1,
+		/obj/item/clothing/suit/armor/platecarrier/full = 1,
+		/obj/item/clothing/suit/armor/laserproof/full = 1,
+		/obj/item/clothing/suit/storage/vest/merc/full = 1,
+		/obj/item/clothing/head/armor/helmet/visor = 1,
+		/obj/item/clothing/head/armor/helmet/merchelm = 1,
+		/obj/item/clothing/head/armor/faceshield/altyn = 1,
+		/obj/item/clothing/head/armor/helmet/merchelm = 1,
+		/obj/item/clothing/head/armor/laserproof = 1,
+		/obj/item/clothing/suit/space/void/security = 1,
+		/obj/item/clothing/suit/space/void/engineering = 1,
+		/obj/item/clothing/suit/space/void/science = 1,
+		/obj/item/clothing/suit/space/void/merc = 1,
+		/obj/item/clothing/suit/space/void/SCAF = 1,
+		/obj/item/storage/deferred/crate/uniform_green = 1,
+		/obj/item/storage/deferred/crate/uniform_brown = 1,
+		/obj/item/storage/deferred/crate/uniform_black = 1,
+		/obj/item/storage/deferred/crate/uniform_flak = 1,
+		/obj/item/storage/deferred/crate/uniform_light = 1,
+		/obj/item/storage/deferred/crate/german_uniform = 1,
+		/obj/item/storage/deferred/pouches = 1,
+		/obj/item/storage/belt/holding = 1,
+		/obj/item/storage/backpack/holding/bst = 1,
+		/obj/item/storage/pouch/holding = 1
+		)
+
+// food + medicine
+
+/obj/machinery/complant_teleporter/admin/medical
+	name = "Bluespace League organic fabricator"
+	desc = "A BSL-branded fabricator that prints an assortment of foods, drinks, and medical supplies for everyday use."
+
+	materials_list = list()
+
+	parts_list = list(
+		/obj/item/reagent_containers/food/drinks/bottle/small/beer = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/small/ale = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/orangejuice = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/gin = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/vodka = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/tequilla = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/patron = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/rum = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/vermouth = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/wine = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/ntcahors = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/cola = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/space_up = 1,
+		/obj/item/storage/deferred/crate/alcohol = 1,
+		/obj/item/reagent_containers/food/snacks/liquidfood = 1,
+		/obj/item/reagent_containers/food/snacks/tastybread = 1,
+		/obj/item/reagent_containers/food/snacks/cheesiehonkers = 1,
+		/obj/item/reagent_containers/food/snacks/syndicake = 1,
+		/obj/item/reagent_containers/food/snacks/spacetwinkie = 1,
+		/obj/item/reagent_containers/food/snacks/no_raisin = 1,
+		/obj/item/reagent_containers/food/snacks/sosjerky = 1,
+		/obj/item/reagent_containers/food/snacks/mre = 1,
+		/obj/item/reagent_containers/food/snacks/mre/can = 1,
+		/obj/item/reagent_containers/food/snacks/mre_paste = 1,
+		/obj/item/reagent_containers/food/snacks/candy/mre = 1,
+		/obj/item/storage/fancy/mre_cracker = 1,
+		/obj/item/storage/deferred/rations = 1,
+		/obj/item/storage/ration_pack = 1,
+		/obj/item/storage/ration_pack/ihr = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/storage/firstaid/fire = 1,
+		/obj/item/storage/firstaid/toxin = 1,
+		/obj/item/storage/firstaid/o2 = 1,
+		/obj/item/storage/firstaid/adv = 1,
+		/obj/item/storage/firstaid/combat = 1,
+		/obj/item/storage/firstaid/surgery = 1,
+		/obj/item/storage/firstaid/nt = 1
+		)

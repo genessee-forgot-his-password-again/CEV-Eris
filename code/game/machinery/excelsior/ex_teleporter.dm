@@ -424,3 +424,25 @@ var/global/excelsior_last_draft = 0
 	if(excelsior_energy < reinforcements_cost)
 		return FALSE
 	return TRUE
+
+// BL
+
+/obj/machinery/complant_teleporter/admin
+	name = "Bluespace League long-range teleporter"
+	idle_power_usage = 1
+	active_power_usage = 1
+	circuit = NULL
+	shipside_only = FALSE
+	materials_list = list(
+		MATERIAL_STEEL = list("amount" = 120, "price" = 1), //base prices doubled untill new item are in
+		MATERIAL_WOOD = list("amount" = 120, "price" = 1),
+		MATERIAL_PLASTIC = list("amount" = 120, "price" = 1),
+		MATERIAL_GLASS = list("amount" = 120, "price" = 1),
+		MATERIAL_SILVER = list("amount" = 120, "price" = 1),
+		MATERIAL_PLASTEEL = list("amount" = 120, "price" = 1),
+		MATERIAL_GOLD = list("amount" = 120, "price" = 1),
+		MATERIAL_URANIUM = list("amount" = 120, "price" = 1),
+		MATERIAL_DIAMOND = list("amount" = 120, "price" = 1)
+		)
+	max_energy = 10000
+	energy_gain = 10000

@@ -431,7 +431,6 @@ var/global/excelsior_last_draft = 0
 	name = "Bluespace League long-range teleporter"
 	idle_power_usage = 1
 	active_power_usage = 1
-	circuit = NULL
 	shipside_only = FALSE
 	materials_list = list(
 		MATERIAL_STEEL = list("amount" = 120, "price" = 1), //base prices doubled untill new item are in

@@ -433,7 +433,7 @@ var/global/excelsior_last_draft = 0
 	active_power_usage = 1
 	shipside_only = FALSE
 	materials_list = list(
-		MATERIAL_STEEL = list("amount" = 120, "price" = 1), //base prices doubled untill new item are in
+		MATERIAL_STEEL = list("amount" = 120, "price" = 1),
 		MATERIAL_WOOD = list("amount" = 120, "price" = 1),
 		MATERIAL_PLASTIC = list("amount" = 120, "price" = 1),
 		MATERIAL_GLASS = list("amount" = 120, "price" = 1),
@@ -443,5 +443,20 @@ var/global/excelsior_last_draft = 0
 		MATERIAL_URANIUM = list("amount" = 120, "price" = 1),
 		MATERIAL_DIAMOND = list("amount" = 120, "price" = 1)
 		)
+	var/list/parts_list = list(
+		/obj/item/stock_parts/capacitor/excelsior = 1,
+		/obj/item/stock_parts/scanning_module/excelsior = 1,
+		/obj/item/stock_parts/manipulator/excelsior = 1,
+		/obj/item/stock_parts/micro_laser/excelsior = 1,
+		/obj/item/stock_parts/matter_bin/excelsior = 1,
+		/obj/item/storage/deferred/crate/excel_conscript = 1,
+		/obj/item/storage/deferred/crate/excel_shock_kit = 1,
+		/obj/item/storage/deferred/crate/excel_eva = 1,
+		/obj/item/storage/deferred/crate/excel_spetsnaz = 1,
+		/obj/item/storage/deferred/crate/excel_heavy = 1,
+		)
+	var/list/IKEA_list = list(
+	)
+	entropy_value = 0
 	max_energy = 10000
 	energy_gain = 10000
